@@ -1,0 +1,13 @@
+podman run -d \
+  --name mysql-db \
+  -e MYSQL_ROOT_PASSWORD=root \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=pass123 \
+  -e MYSQL_DATABASE=appdb \
+  -p 3306:3306 \
+  -p 33060:33060 \
+  docker.io/library/mysql:8
+
+
+  # Se debe ejecutar este comando en podman para actualiza la bd
+  
